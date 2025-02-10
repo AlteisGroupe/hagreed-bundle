@@ -1,0 +1,34 @@
+{
+    "name": "alteis/hagreed-bundle",
+    "type": "symfony-bundle",
+    "description": "plugin hagreed in Bundle Symfony",
+    "require": {
+        "symfony/framework-bundle": "^7.0",
+        "symfony/http-client": "^7.0"
+    },
+    "license": "proprietary",
+    "keywords": ["symfony-ux", "recipes"],
+    "autoload": {
+        "psr-4": {
+            "Alteis\\HagreedBundle\\": "src/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "symfony/flex": true
+        },
+        "sort-packages": true
+    },
+    "extra": {
+        "symfony": {
+            "assets": [
+                "assets/dist"
+            ],
+            "endpoint": [
+                "https://gitlab.com/api/v4/projects/66336950/repository/files/index.json/raw?ref=main",
+                "flex://defaults"
+            ]
+        }
+    }
+
+}
