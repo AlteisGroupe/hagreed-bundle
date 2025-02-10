@@ -9,14 +9,14 @@ Hagreed Bundle requires PHP 8.2 or higher and Symfony 7.0 or higher. Run the fol
 composer require alteis/hagreed-bundle
 ```
 ### minimal require
-Add your token to the **ALTEIS_HAGREED_TOKEN** variable in your `.env` file
+Add your token to the **HAGREED_TOKEN** variable in your `.env` file
 ```.env
-ALTEIS_HAGREED_TOKEN="your-token"
+HAGREED_TOKEN="your-token"
 ```
 Create file `config/packages/alteis_hagreed.yaml` if not exist.
 ```yaml
 alteis_hagreed:
-    token: '%env(ALTEIS_HAGREED_TOKEN)%'
+    token: '%env(HAGREED_TOKEN)%'
 ```
  Register the bundle in your application. Edit the `config/bundles.php` file and add the following if this has not already been done
  ```php
@@ -59,7 +59,7 @@ In your html.twig code, add the following functions: `{{ header_hagreed() }}` & 
 ### more options
 ``` yaml
 alteis_hagreed:
-    token: '%env(ALTEIS_HAGREED_TOKEN)%'
+    token: '%env(HAGREED_TOKEN)%'
     id: 'hagreed' #Refer to the Installation section.
     timeout: 5000 #The cookie box will launch - if the user has never made a choice - after 5000 ms (5 seconds).
     cookies: #Insert your cookies here

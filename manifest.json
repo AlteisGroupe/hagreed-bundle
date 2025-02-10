@@ -21,17 +21,17 @@
           "config/": "%CONFIG_DIR%/"
         },
         "env": {
-          "ALTEIS_HAGREED_TOKEN": ""
+          "HAGREED_TOKEN": ""
         },
         "post-install-output": [
-          "  * Modify your ALTEIS_HAGREED_TOKEN config in <fg=green>.env</>"
+          "  * Modify your HAGREED_TOKEN config in <fg=green>.env</>"
         ]
       },
       "files": {
         "config/packages/alteis_hagreed.yaml": {
           "contents": [
             "alteis_hagreed:",
-            "    token: '%env(ALTEIS_HAGREED_TOKEN)%'",
+            "    token: '%env(HAGREED_TOKEN)%'",
             ""
           ],
           "executable": false
