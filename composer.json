@@ -1,5 +1,5 @@
 {
-    "name": "alteis/hagreed-bundle",
+    "name": "mbarata/hagreed-bundle",
     "type": "symfony-bundle",
     "description": "plugin hagreed in Bundle Symfony",
     "require": {
