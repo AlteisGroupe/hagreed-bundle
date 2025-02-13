@@ -1,0 +1,18 @@
+{
+  "manifests": {
+    "mbarata/hagreed-bundle": {
+      "manifest": {
+        "bundles": {
+          "Alteis\\HagreedBundle\\AlteisHagreedBundle": [
+            "all"
+          ]
+        },
+        "post-install-output": [
+          "  * Data Director is ready."
+        ]
+      },
+      "files": [],
+      "ref": "9e1664cbefd0d0b7332ba30311f8647f9ffe0b19"
+    }
+  }
+}
