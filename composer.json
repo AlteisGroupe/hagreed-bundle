@@ -25,7 +25,8 @@
                 "assets/dist"
             ],
             "endpoint": [
-                "flex://defaults"
+                "flex://defaults",
+                "https://api.github.com/repos/mbarataPHP/hagreed-bundle/contents/index.json"
             ]
         }
     }
