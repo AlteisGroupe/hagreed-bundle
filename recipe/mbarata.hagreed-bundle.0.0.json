@@ -7,9 +7,12 @@
             "all"
           ]
         },
-        "post-install-output": [
-          "  * Data Director is ready."
-        ]
+        "copy-from-recipe": {
+          "config/": "%CONFIG_DIR%/"
+        },
+        "env": {
+          "HAGREED_TOKEN": ""
+        }
       },
       "files": [],
       "ref": "9e1664cbefd0d0b7332ba30311f8647f9ffe0b19"
