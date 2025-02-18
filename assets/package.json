@@ -1,5 +1,5 @@
 {
-  "name": "@mbarata/hagreed-bundle",
+  "name": "@alteis/hagreed-bundle",
   "description": "plugin hagreed in Bundle Symfony",
   "version": "1.0.0",
   "license": "Apache-2.0",
