@@ -1,13 +1,21 @@
 {
-    "name": "mbarata/hagreed-bundle",
+    "name": "alteis/hagreed-bundle",
     "type": "symfony-bundle",
     "description": "plugin hagreed in Bundle Symfony",
+    "license": "Apache-2.0",
     "require": {
-        "symfony/framework-bundle": "^7.0",
         "symfony/http-client": "^7.0"
     },
-    "license": "proprietary",
-    "keywords": ["symfony-ux", "recipes"],
+    "require-dev": {
+        "symfony/framework-bundle": "^7.0"
+    },
+    "authors": [
+        {
+            "name": "Ronan Sauvage",
+            "email": "ronan.sau@gmail.com"
+        }
+    ],
+    "keywords": ["symfony-ux"],
     "autoload": {
         "psr-4": {
             "Alteis\\HagreedBundle\\": "src/"
