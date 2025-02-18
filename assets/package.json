@@ -1,0 +1,12 @@
+{
+  "name": "@alteis/hagreed-bundle",
+  "description": "plugin hagreed in Bundle Symfony",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "symfony": {
+    "importmap": {
+      "@tizy/hagreed/hagreed.js": "^1.2.7",
+      "@tizy/hagreed/style.css": "^1.2.7"
+    }
+  }
+}
