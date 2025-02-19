@@ -15,6 +15,20 @@ Add your token to the **HAGREED_TOKEN** variable in your `.env` file
 ```.env
 HAGREED_TOKEN="your-token"
 ```
+
+In your html.twig code, add the following functions: `{{ header_hagreed() }}` & `{{ body_end_hagreed() }}`.
+```twig
+<html>
+    <head>
+        ....
+        {{ header_hagreed() }} {# Add in the header #}
+    </head>
+    <body>
+        ...
+        {{ body_end_hagreed() }}  {# Add towards the end of the body block #}
+    </body>
+</html>
+ ```
 Create file `config/packages/alteis_hagreed.yaml` if not exist.
 ```yaml
 alteis_hagreed:
@@ -44,20 +58,11 @@ return [
     ],
 ];
 ```
-
-In your html.twig code, add the following functions: `{{ header_hagreed() }}` & `{{ body_end_hagreed() }}`.
-```twig
-<html>
-    <head>
-        ....
-        {{ header_hagreed() }} {# Add in the header #}
-    </head>
-    <body>
-        ...
-        {{ body_end_hagreed() }}  {# Add towards the end of the body block #}
-    </body>
-</html>
- ```
+### display banner
+Code for users to change their mind about cookies.
+```html
+<a href="javascript:window.hagreedBundle.displayBanner();">Cookie Management</a>
+```
 ### more options
 ``` yaml
 alteis_hagreed:
