@@ -1,6 +1,7 @@
 # hagreed-bundle
 Hagreed integration for Symfony – Easily manage user consents and cookies in your application, leveraging the Hagreed system.
 
+Link site: https://www.hagreed.com/
 
 ## Configuration
 ### installation
@@ -10,6 +11,7 @@ composer require alteis/hagreed-bundle
 ```
 ### minimal require
 Add your token to the **HAGREED_TOKEN** variable in your `.env` file
+> To create your **token**, please fill out the form on the website https://www.hagreed.com/
 ```.env
 HAGREED_TOKEN="your-token"
 ```
