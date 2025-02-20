@@ -11,6 +11,7 @@ class HagreedExtension extends AbstractExtension
     public function __construct(
         private readonly Environment $twig,
         private readonly ?string $token,
+        private readonly ?string $template,
         private readonly ?string $element,
         private readonly array $cookies,
         private readonly array $consentsFormList,
@@ -37,6 +38,7 @@ class HagreedExtension extends AbstractExtension
         return $this->twig->render('@AlteisHagreed/header.html.twig', [
             'element' => $this->element,
             'token' => $this->token,
+            'template' => $this->template,
             'timeout' => $this->timeout,
             'language' => $this->language,
             'cookies' => json_encode($this->cookies),
