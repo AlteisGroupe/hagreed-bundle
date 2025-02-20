@@ -23,6 +23,7 @@ class DependencyInjection extends Extension
         }
 
         $container->setParameter('alteis_hagreed.element', $config['id']);
+        $container->setParameter('alteis_hagreed.template', $config['template']);
         $container->setParameter('alteis_hagreed.token', $config['token']);
         $container->setParameter('alteis_hagreed.cookies', $config['cookies']);
         $container->setParameter('alteis_hagreed.timeout', $config['timeout']);

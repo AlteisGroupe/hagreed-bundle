@@ -67,6 +67,7 @@ Code for users to change their mind about cookies.
 ``` yaml
 alteis_hagreed:
     token: '%env(HAGREED_TOKEN)%'
+    template: 'default'
     id: 'hagreed' #Refer to the Installation section.
     timeout: 5000 #The cookie box will launch - if the user has never made a choice - after 5000 ms (5 seconds).
     cookies: #Insert your cookies here

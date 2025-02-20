@@ -18,6 +18,7 @@ class Configuration implements ConfigurationInterface
                     ->scalarNode('id')->defaultValue('hagreed')->end()
                     ->scalarNode('token')->defaultNull()->end()
                     ->integerNode('timeout')->defaultValue(5000)->end()
+                    ->enumNode('template')->values(['default', 'fullpage', 'custom'])->defaultNull()->end()
 
                     ->arrayNode('language')
                         ->children()

@@ -12,6 +12,7 @@ return static function (ContainerConfigurator $container): void {
     $container->services()
         ->set(HagreedExtension::class, HagreedExtension::class)
         ->arg('$token', '%alteis_hagreed.token%')
+        ->arg('$template', '%alteis_hagreed.template%')
         ->arg('$element', '%alteis_hagreed.element%')
         ->arg('$cookies', '%alteis_hagreed.cookies%')
         ->arg('$timeout', '%alteis_hagreed.timeout%')

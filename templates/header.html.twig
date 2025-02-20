@@ -18,6 +18,9 @@
     {% endif %}
 
     window.hagreedBundle = new Hagreed.default("{{ token }}", hagreedLanguage);
+    {% if template is not null %}
+    window.hagreedBundle.template = "{{ template }}";
+    {% endif %}
     window.hagreedBundle.element = "{{ element }}";
     window.hagreedBundle.cookiesList = hagreedCookiesList;
     window.hagreedBundle.consentsFormList = hagreedConsentsFormList;
