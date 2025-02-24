@@ -63,6 +63,35 @@ Code for users to change their mind about cookies.
 ```html
 <a href="javascript:window.hagreedBundle.displayBanner();">Cookie Management</a>
 ```
+### Retrieve your consent registry
+#### command
+```shell
+php bin/console alteis:hagreed:export-consents
+```
+#### service
+You can use the method `\Alteis\HagreedBundle\Service\ApiHagreedInterface::exportConsents` retrieve your consent registry
+
+example:
+```php
+<?php
+
+namespace App\Service;
+
+use Alteis\HagreedBundle\Service\ApiHagreedInterface;
+
+class MyService {
+
+    public function __construct(
+        private readonly ApiHagreedInterface $apiHagreed
+    ) {}
+    
+    public function method() {
+        $data = $this->apiHagreed->exportConsents('your-email@test.com');
+        ...
+    }
+}
+
+```
 ### more options
 ``` yaml
 alteis_hagreed:
