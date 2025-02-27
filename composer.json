@@ -2,7 +2,7 @@
     "name": "alteis/hagreed-bundle",
     "type": "symfony-bundle",
     "description": "plugin hagreed in Bundle Symfony",
-    "license": "Apache-2.0",
+    "license": "MIT",
     "require": {
         "symfony/http-client": "^7.0"
     },
