@@ -16,6 +16,7 @@ class HagreedExtension extends AbstractExtension
         private readonly array $cookies,
         private readonly array $consentsFormList,
         private readonly int $timeout,
+        private readonly bool $turbo,
         private readonly array $language
     ) {}
 
@@ -35,15 +36,27 @@ class HagreedExtension extends AbstractExtension
         if ($this->token === null) {
             throw new \Exception('token is null');
         }
-        return $this->twig->render('@AlteisHagreed/header.html.twig', [
-            'element' => $this->element,
-            'token' => $this->token,
-            'template' => $this->template,
-            'timeout' => $this->timeout,
-            'language' => $this->language,
-            'cookies' => json_encode($this->cookies),
-            'consentsFormList' => json_encode($this->consentsFormList),
-        ]);
+        if ($this->turbo) {
+            return $this->twig->render('@AlteisHagreed/header_turbo.html.twig', [
+                'element' => $this->element,
+                'token' => $this->token,
+                'template' => $this->template,
+                'timeout' => $this->timeout,
+                'language' => $this->language,
+                'cookies' => json_encode($this->cookies),
+                'consentsFormList' => json_encode($this->consentsFormList),
+            ]);
+        } else {
+            return $this->twig->render('@AlteisHagreed/header.html.twig', [
+                'element' => $this->element,
+                'token' => $this->token,
+                'template' => $this->template,
+                'timeout' => $this->timeout,
+                'language' => $this->language,
+                'cookies' => json_encode($this->cookies),
+                'consentsFormList' => json_encode($this->consentsFormList),
+            ]);
+        }
     }
 
     public function bodyEnd(): string

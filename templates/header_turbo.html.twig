@@ -1,0 +1,36 @@
+<link href="{{ asset('vendor/@tizy/hagreed/style.css') }}" rel="stylesheet" />
+<link rel="modulepreload" href="{{ asset('vendor/@tizy/hagreed/hagreed.js') }}">
+<div id="header_hagreed_cookies_consents" data-cookies="{{ cookies }}" data-consents="{{ consentsFormList }}"></div>
+<script type="module">
+
+    import Hagreed from '@tizy/hagreed/hagreed.js';
+    document.addEventListener("turbo:load", () => {
+        if (typeof window.hagreedBundle !== 'undefined') {
+            return;
+        }
+
+        const elementCookiesConsents = document.getElementById('header_hagreed_cookies_consents');
+        const hagreedCookiesList = JSON.parse(elementCookiesConsents.getAttribute('data-cookies')); // cookie list
+        const hagreedConsentsFormList = JSON.parse(elementCookiesConsents.getAttribute('data-consents')); // cookie list
+
+        const hagreedLanguage = {};
+        {% if language['lang'] is not null %}
+        hagreedLanguage.lang = "{{ language['lang'] }}";
+        {% endif %}
+
+        {% if language['force_lang'] is not null %}
+        hagreedLanguage.forceLang = {{ language['force_lang'] ? 'true' : 'false' }};
+        {% endif %}
+
+        window.hagreedBundle = new Hagreed.default("{{ token }}", hagreedLanguage);
+        {% if template is not null %}
+        window.hagreedBundle.template = "{{ template }}";
+        {% endif %}
+        window.hagreedBundle.element = "{{ element }}";
+        window.hagreedBundle.cookiesList = hagreedCookiesList;
+        window.hagreedBundle.consentsFormList = hagreedConsentsFormList;
+        window.hagreedBundle.timeout = {{ timeout }}; // Ce paramètre permet de différer le moment où la boîte des cookies s’ouvre. Cela s’exprime en millisecondes.
+        window.hagreedBundle.init();
+    });
+
+</script>
