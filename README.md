@@ -99,6 +99,7 @@ alteis_hagreed:
     template: 'default'
     id: 'hagreed' #Refer to the Installation section.
     timeout: 5000 #The cookie box will launch - if the user has never made a choice - after 5000 ms (5 seconds).
+    turbo: false #If your site uses Turbo, set this to "true".
     cookies: #Insert your cookies here
         -
             id: ga

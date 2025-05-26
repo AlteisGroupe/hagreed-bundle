@@ -19,6 +19,7 @@ class Configuration implements ConfigurationInterface
                     ->scalarNode('token')->defaultNull()->end()
                     ->integerNode('timeout')->defaultValue(5000)->end()
                     ->enumNode('template')->values(['default', 'fullpage', 'custom'])->defaultNull()->end()
+                    ->booleanNode('turbo')->defaultFalse()->end()
 
                     ->arrayNode('language')
                         ->children()

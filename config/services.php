@@ -16,6 +16,7 @@ return static function (ContainerConfigurator $container): void {
         ->arg('$element', '%alteis_hagreed.element%')
         ->arg('$cookies', '%alteis_hagreed.cookies%')
         ->arg('$timeout', '%alteis_hagreed.timeout%')
+        ->arg('$turbo', '%alteis_hagreed.turbo%')
         ->arg('$language', '%alteis_hagreed.language%')
         ->arg('$consentsFormList', '%alteis_hagreed.consents_form_list%')
         ->autowire()
